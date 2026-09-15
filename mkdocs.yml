@@ -73,6 +73,14 @@ nav:
           - JitPack: jitpack/index.md
       - Networking:
           - Retrofit: retrofit/index.md
-  - Readings: readings/index.md
+  - Readings:
+      - Overview: readings/index.md
+      - Do This: readings/do-this/index.md
+      - Don't Do This: readings/dont-do-this/index.md
+      - Investigate: readings/investigate/index.md
+      - Tasks For Me: readings/tasks-for-me/index.md
+      - Why Don't We Do This: readings/why-dont-we-do-this/index.md
+      - Keep This Note: readings/keep-this-note/index.md
+      - I Don't Get It: readings/needs-more-attention/index.md
   - Ideas: ideas/index.md
   - Learnings: learnings/index.md

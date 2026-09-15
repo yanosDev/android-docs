@@ -41,7 +41,14 @@ docs/
 ├── gradle/                   # Docs > Build & Publish > Gradle
 ├── jitpack/                  # Docs > Build & Publish > JitPack
 ├── retrofit/                 # Docs > Networking > Retrofit
-├── readings/                 # Notes/takeaways on articles, talks, books
+├── readings/                  # Notes/takeaways on articles, talks, books
+│   ├── do-this/               # Practices worth adopting
+│   ├── dont-do-this/          # Anti-patterns to avoid
+│   ├── investigate/           # Flagged for deeper digging
+│   ├── tasks-for-me/          # Action items triggered by a reading
+│   ├── why-dont-we-do-this/   # Gaps vs. current practice, worth questioning
+│   ├── keep-this-note/        # Quotes/snippets worth keeping
+│   └── needs-more-attention/  # Didn't click yet, needs another pass
 ├── ideas/                    # Backlog of project ideas & experiments
 ├── learnings/                # Dated TIL-style entries, lessons learned
 └── stylesheets/extra.css     # Black/orange theme tweaks on top of mkdocs-material

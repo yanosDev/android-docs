@@ -21,7 +21,7 @@ a topic.
 | ↳ [JitPack](jitpack/index.md) | Publishing & consuming libraries |
 | ↳ [Retrofit](retrofit/index.md) | Networking, serialization |
 | ↳ [Dependency Injection](dependency-injection/index.md) | Hilt, Koin, manual DI |
-| [Readings](readings/index.md) | Notes and takeaways from articles, blog posts, talks, books |
+| [Readings](readings/index.md) | Notes from articles/talks/books, sorted into Do This / Don't Do This / Investigate / Tasks For Me / Why Don't We Do This / Keep This Note / I Don't Get It |
 | [Ideas](ideas/index.md) | Project ideas, experiments to try, "what if" notes |
 | [Learnings](learnings/index.md) | Dated TIL-style entries, mistakes, lessons learned |
 
