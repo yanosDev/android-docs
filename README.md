@@ -27,18 +27,24 @@ mkdocs serve
 
 ## Project structure
 
+The top nav has 4 sections: **Docs**, **Readings**, **Ideas**, **Learnings**.
+
 ```text
 docs/
-├── index.md                  # Landing page / table of contents
-├── kotlin/                   # Language fundamentals, idioms
-├── coroutines-flow/          # Coroutines, Flow, structured concurrency
-├── android/                  # Android framework, architecture, lifecycle
-├── jetpack-compose/          # Compose UI, state, navigation
-├── material/                 # Material Design 3 components & theming
-├── gradle/                   # Build system, version catalogs, plugins
-├── jitpack/                  # Publishing & consuming libraries via JitPack
-├── retrofit/                 # Networking, Retrofit, OkHttp, serialization
-└── dependency-injection/     # Hilt, Koin, manual DI
+├── index.md                  # Landing page / table of contents (not a tab, reached via the logo)
+├── kotlin/                   # Docs > Language > Kotlin
+├── coroutines-flow/          # Docs > Language > Coroutines & Flow
+├── android/                  # Docs > Architecture > Android
+├── dependency-injection/     # Docs > Architecture > Dependency Injection
+├── jetpack-compose/          # Docs > UI > Jetpack Compose
+├── material/                 # Docs > UI > Material Design
+├── gradle/                   # Docs > Build & Publish > Gradle
+├── jitpack/                  # Docs > Build & Publish > JitPack
+├── retrofit/                 # Docs > Networking > Retrofit
+├── readings/                 # Notes/takeaways on articles, talks, books
+├── ideas/                    # Backlog of project ideas & experiments
+├── learnings/                # Dated TIL-style entries, lessons learned
+└── stylesheets/extra.css     # Black/orange theme tweaks on top of mkdocs-material
 ```
 
 Add a new page by dropping a `.md` file into the relevant folder and listing

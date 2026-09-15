@@ -58,17 +58,21 @@ markdown_extensions:
   - pymdownx.emoji
 
 nav:
-  - Language:
-      - Kotlin: kotlin/index.md
-      - Coroutines & Flow: coroutines-flow/index.md
-  - Architecture:
-      - Android: android/index.md
-      - Dependency Injection: dependency-injection/index.md
-  - UI:
-      - Jetpack Compose: jetpack-compose/index.md
-      - Material Design: material/index.md
-  - Build & Publish:
-      - Gradle: gradle/index.md
-      - JitPack: jitpack/index.md
-  - Networking:
-      - Retrofit: retrofit/index.md
+  - Docs:
+      - Language:
+          - Kotlin: kotlin/index.md
+          - Coroutines & Flow: coroutines-flow/index.md
+      - Architecture:
+          - Android: android/index.md
+          - Dependency Injection: dependency-injection/index.md
+      - UI:
+          - Jetpack Compose: jetpack-compose/index.md
+          - Material Design: material/index.md
+      - Build & Publish:
+          - Gradle: gradle/index.md
+          - JitPack: jitpack/index.md
+      - Networking:
+          - Retrofit: retrofit/index.md
+  - Readings: readings/index.md
+  - Ideas: ideas/index.md
+  - Learnings: learnings/index.md
