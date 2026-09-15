@@ -1,0 +1,78 @@
+site_name: Android & Kotlin Notes
+site_description: Personal documentation on Kotlin, Android, Jetpack Compose, Gradle, DI and more.
+site_author: Sonay
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: material/android
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji
+
+nav:
+  - Home: index.md
+  - Kotlin:
+      - Overview: kotlin/index.md
+  - Coroutines & Flow:
+      - Overview: coroutines-flow/index.md
+  - Android:
+      - Overview: android/index.md
+  - Jetpack Compose:
+      - Overview: jetpack-compose/index.md
+  - Material Design:
+      - Overview: material/index.md
+  - Gradle:
+      - Overview: gradle/index.md
+  - JitPack:
+      - Overview: jitpack/index.md
+  - Retrofit & Networking:
+      - Overview: retrofit/index.md
+  - Dependency Injection:
+      - Overview: dependency-injection/index.md
