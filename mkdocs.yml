@@ -6,27 +6,25 @@ theme:
   name: material
   language: en
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
+    - scheme: slate
+      primary: black
+      accent: orange
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+    - scheme: default
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
   icon:
     logo: material/android
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
-    - navigation.sections
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.indexes
     - toc.follow
@@ -34,6 +32,9 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.annotate
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
@@ -57,22 +58,17 @@ markdown_extensions:
   - pymdownx.emoji
 
 nav:
-  - Home: index.md
-  - Kotlin:
-      - Overview: kotlin/index.md
-  - Coroutines & Flow:
-      - Overview: coroutines-flow/index.md
-  - Android:
-      - Overview: android/index.md
-  - Jetpack Compose:
-      - Overview: jetpack-compose/index.md
-  - Material Design:
-      - Overview: material/index.md
-  - Gradle:
-      - Overview: gradle/index.md
-  - JitPack:
-      - Overview: jitpack/index.md
-  - Retrofit & Networking:
-      - Overview: retrofit/index.md
-  - Dependency Injection:
-      - Overview: dependency-injection/index.md
+  - Language:
+      - Kotlin: kotlin/index.md
+      - Coroutines & Flow: coroutines-flow/index.md
+  - Architecture:
+      - Android: android/index.md
+      - Dependency Injection: dependency-injection/index.md
+  - UI:
+      - Jetpack Compose: jetpack-compose/index.md
+      - Material Design: material/index.md
+  - Build & Publish:
+      - Gradle: gradle/index.md
+      - JitPack: jitpack/index.md
+  - Networking:
+      - Retrofit: retrofit/index.md

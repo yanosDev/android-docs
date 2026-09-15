@@ -1,0 +1,63 @@
+/* Extra black + orange styling on top of the Material "slate" / "black" + "orange" palette. */
+
+:root {
+  --md-code-hl-color: #ff8f0055;
+}
+
+/* Deeper black header/tabs instead of Material's default dark grey */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #101010;
+  --md-default-fg-color: #e8e8e8;
+  --md-default-fg-color--light: #b8b8b8;
+  --md-default-fg-color--lighter: #7a7a7a;
+
+  --md-primary-fg-color: #0a0a0a;
+  --md-primary-bg-color: #ff9800;
+
+  --md-typeset-a-color: #ff9800;
+
+  --md-footer-bg-color: #0a0a0a;
+  --md-footer-bg-color--dark: #000000;
+}
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #0a0a0a;
+}
+
+/* Orange accent line under the active tab / active nav item */
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #ff9800 !important;
+}
+
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: #ff9800;
+}
+
+/* Code blocks: subtle orange left border to tie them into the theme */
+.highlight pre {
+  border-left: 3px solid #ff9800;
+}
+
+/* Selection color */
+::selection {
+  background: #ff980055;
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff9800aa;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9800;
+}
