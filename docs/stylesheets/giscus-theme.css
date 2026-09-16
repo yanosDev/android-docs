@@ -16,3 +16,35 @@
   --color-accent-muted: rgba(255, 152, 0, 0.4);
   --color-accent-subtle: rgba(255, 152, 0, 0.15);
 }
+
+/*
+ * Shape/spacing/font tweaks beyond what the color variables cover.
+ * These target giscus's actual DOM classes (prefixed "gsc-"), which aren't
+ * a documented public API — if one of these doesn't visibly change
+ * anything, inspect the element in the browser and correct the selector.
+ */
+
+.gsc-comment-box,
+.gsc-comment {
+  border-radius: 10px !important;
+}
+
+.gsc-comment {
+  padding: 16px !important;
+  box-shadow: 0 1px 0 rgba(255, 152, 0, 0.2) !important;
+}
+
+.gsc-comment-box-textarea {
+  border-radius: 8px !important;
+  font-size: 15px !important;
+}
+
+.gsc-comment-content,
+.gsc-comment-content-preview {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.gsc-header {
+  font-size: 15px !important;
+}
