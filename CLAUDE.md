@@ -36,7 +36,7 @@ term page is added (mandatory, see below), but only add to
 `phrasebook.md` when a genuinely new, distinct verb/phrase comes up
 worth having a precise word for.
 
-Three kinds of section, side by side:
+Four kinds of section, side by side:
 
 - `docs/learnings/general/` — cross-language concepts: not tied to one
   language (e.g. compiler, generics, type erasure, inlining, higher-order
@@ -51,6 +51,25 @@ Three kinds of section, side by side:
 - `docs/learnings/<language>/` (e.g. `kotlin/`) — one folder per language,
   for that language's own keywords/idioms (e.g. Kotlin's `reified` — no
   other mainstream language has that exact keyword).
+- `docs/learnings/android/` — Android-**framework** concepts (not the
+  Kotlin language, not general CS): Activity/Service/lifecycle, WorkManager,
+  ART/Binder, etc. One level deeper than the other sections because of its
+  breadth: `Android > <Subject Area>/ > <Tier> > page`, where each subject
+  area is its own subfolder with its own `index.md` hub (see
+  `docs/learnings/android/components-lifecycle/` for the pattern). A
+  subject area groups closely-related API members into one page each
+  (e.g. all Activity lifecycle callbacks in one `activity-lifecycle.md`)
+  rather than one page per method — consolidate, don't atomize.
+
+  This section is seeded from `docs/qa/*.md` (see below) but is
+  **intentionally incomplete** — only `docs/qa/android-core.md` (1 of 17
+  Q&A topic files) has been expanded into full pages so far (`components-lifecycle/`,
+  `app-navigation/`, `state-lifecycle/`, `runtime-internals/`, 25 pages).
+  At that page-per-question ratio, expanding all 17 Q&A files would mean
+  400+ pages — explicitly judged not worth doing wholesale. Don't treat
+  the remaining 16 Q&A topics as an implicit backlog to grind through;
+  only expand a specific topic into full Android pages when the user asks
+  for that topic by name.
 
 A concept can be dual: Kotlin's `inline` keyword is a specific language
 mechanism, but "function inlining" is also a general compiler technique —
@@ -160,6 +179,22 @@ precise-terminology reference. Don't try to reconcile or merge the two;
 they serve different purposes. If more Q&A content is added later, follow
 the same topic-grouping and collapsed-admonition shape, and add new pages
 to both `docs/qa/index.md`'s table and `nav:` under `Q&A`.
+
+One exception: `docs/qa/android-core.md`'s questions link individual
+keyword mentions (in the question title itself, e.g. `[Activity lifecycle](../learnings/android/components-lifecycle/activity-lifecycle.md)`)
+to their corresponding `docs/learnings/android/` page, since that page now
+exists — confirmed these links render correctly even inside a collapsed
+admonition's title. The other 16 Q&A topic files don't have this yet,
+since their corresponding Android Learnings pages haven't been built (see
+`docs/learnings/android/`'s note above) — add the same per-keyword linking
+only once/if a topic's Learnings pages actually get built, not before.
+
+The `qa-quiz` skill (`.claude/skills/qa-quiz/SKILL.md`) runs a live,
+conversational quiz sampled from these pages on request (e.g. "give me a
+small survey", "quiz me on Compose") — one question at a time, graded
+against the reference answer, not just flipped open. That's a separate
+mechanism from the collapsed admonitions above; both read the same
+content but serve different moments (browsing a page vs. being quizzed).
 
 ### TOC-sidebar mirror (`hooks.py` + `overrides/main.html`)
 

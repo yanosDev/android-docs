@@ -119,6 +119,51 @@ nav:
               - Inline (Inlining): learnings/general/inline.md
           - Expert:
               - Type Erasure: learnings/general/type-erasure.md
+      - Android:
+          - Overview: learnings/android/index.md
+          - Components & Lifecycle:
+              - Overview: learnings/android/components-lifecycle/index.md
+              - Beginner:
+                  - Activity Lifecycle: learnings/android/components-lifecycle/activity-lifecycle.md
+                  - Fragment & View Lifecycle: learnings/android/components-lifecycle/fragment-view-lifecycle.md
+              - Intermediate:
+                  - Services: learnings/android/components-lifecycle/services.md
+                  - WorkManager Basics: learnings/android/components-lifecycle/workmanager-basics.md
+                  - BroadcastReceiver: learnings/android/components-lifecycle/broadcast-receiver.md
+                  - ContentProvider: learnings/android/components-lifecycle/content-provider.md
+          - App & Task Navigation:
+              - Overview: learnings/android/app-navigation/index.md
+              - Beginner:
+                  - Intents & Intent Filters: learnings/android/app-navigation/intents.md
+              - Intermediate:
+                  - Tasks & Back Stack: learnings/android/app-navigation/tasks-back-stack.md
+                  - Launch Modes: learnings/android/app-navigation/launch-modes.md
+                  - Intent Flags: learnings/android/app-navigation/intent-flags.md
+              - Expert:
+                  - Task Affinity: learnings/android/app-navigation/task-affinity.md
+          - State & Process Lifecycle:
+              - Overview: learnings/android/state-lifecycle/index.md
+              - Beginner:
+                  - ViewModel: learnings/android/state-lifecycle/viewmodel.md
+              - Intermediate:
+                  - Configuration Changes & State Restoration: learnings/android/state-lifecycle/configuration-changes.md
+                  - Application Class & Context: learnings/android/state-lifecycle/application-context.md
+              - Expert:
+                  - Process Death & Recovery: learnings/android/state-lifecycle/process-death-recovery.md
+                  - Process Importance & oom_adj: learnings/android/state-lifecycle/process-importance.md
+          - Runtime & App Startup:
+              - Overview: learnings/android/runtime-internals/index.md
+              - Intermediate:
+                  - Cold, Warm & Hot Start: learnings/android/runtime-internals/process-start-types.md
+                  - Jetpack App Startup: learnings/android/runtime-internals/jetpack-app-startup.md
+                  - Looper & Handler: learnings/android/runtime-internals/looper-handler.md
+                  - Window & WindowManager: learnings/android/runtime-internals/window-windowmanager.md
+              - Expert:
+                  - App Startup Sequence: learnings/android/runtime-internals/app-startup-sequence.md
+                  - Zygote: learnings/android/runtime-internals/zygote.md
+                  - ART vs. Dalvik: learnings/android/runtime-internals/art-vs-dalvik.md
+                  - Binder IPC: learnings/android/runtime-internals/binder-ipc.md
+                  - UI Thread vs. Render Thread: learnings/android/runtime-internals/ui-render-thread.md
       - Patterns:
           - Overview: learnings/patterns/index.md
           - Beginner:

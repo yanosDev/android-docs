@@ -17,6 +17,7 @@ the verbs and phrases used to describe what code is doing.
 | [General](general/index.md) | Foundational concepts not tied to one language — compiler, generics, type erasure, inlining |
 | [Patterns](patterns/index.md) | Recurring design solutions (Builder, Singleton, ...), with Kotlin examples |
 | [Kotlin](kotlin/index.md) | Language fundamentals, idioms, standard library — one page per term |
+| [Android](android/index.md) | Platform APIs and mechanics — not the language, the framework. Grouped into subject-area subfolders (Components & Lifecycle, App & Task Navigation, State & Process Lifecycle, Runtime & App Startup), each tiered by level like the other sections |
 
 ## Levels
 

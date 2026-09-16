@@ -26,6 +26,7 @@ a topic.
 | ↳ [General](learnings/general/index.md) | Cross-language concepts — compiler, generics, type erasure, inlining |
 | ↳ [Patterns](learnings/patterns/index.md) | Design patterns, with Kotlin examples |
 | ↳ [Kotlin](learnings/kotlin/index.md) | Language fundamentals, idioms, standard library |
+| ↳ [Android](learnings/android/index.md) | Platform APIs and mechanics — components, lifecycle, navigation, process model |
 
 ## How I use this
 
