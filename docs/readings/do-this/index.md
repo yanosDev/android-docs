@@ -1,7 +1,3 @@
----
-comments: true
----
-
 # Do This
 
 Concrete practices, patterns, or techniques from something you read that are

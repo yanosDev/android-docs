@@ -1,7 +1,3 @@
----
-comments: true
----
-
 # Why Don't We Do This
 
 A place for the gap between what you read and what your current project(s)

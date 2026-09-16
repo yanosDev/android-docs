@@ -59,38 +59,55 @@ it under `nav:` in `mkdocs.yml`.
 
 ## Comments (giscus)
 
-Pages with `comments: true` in their front matter get a threaded
-comment/reply box at the bottom, backed by
-[giscus](https://giscus.app) → GitHub Discussions on this repo. Because the
-repo is **private**, only accounts with read access to it (you, plus anyone
-you add as a collaborator) can view or post comments — this is effectively a
-personal annotation layer, not public commenting.
-
-It's currently enabled on `readings/`, `ideas/`, and `learnings/`. To enable
-it on any other page, add this to the top of the `.md` file:
+Every page gets a threaded comment/reply box at the bottom by default, backed
+by [giscus](https://giscus.app) → GitHub Discussions on this (now **public**)
+repo. To turn comments **off** on a specific page, add this to the top of
+its `.md` file:
 
 ```markdown
 ---
-comments: true
+comments: false
 ---
 ```
 
-### One-time GitHub setup
+Styling: the widget uses a custom theme
+(`docs/stylesheets/giscus-theme.css`) recolored to match the site's black +
+orange palette, loaded via jsDelivr and swapped for a plain light theme when
+you toggle to light mode. jsDelivr caches `@main` URLs for a while, so a
+change to that file may take a few minutes to show up — see
+<https://www.jsdelivr.com/tools/purge> if you need it sooner.
+
+### One-time GitHub setup (already done)
 
 1. Repo → **Settings → General → Features** → enable **Discussions**.
 2. Repo → **Discussions** tab → create a category named `Comments` with
    format **Announcement** (so only you can start a new discussion thread —
-   giscus creates one automatically per page on the first comment; visitors
-   with access can still reply to existing ones).
-3. Install the [giscus GitHub App](https://github.com/apps/giscus) and grant
-   it access to this repo only.
-4. Go to <https://giscus.app>, enter `yanosDev/android-docs` as the
-   repository, choose **pathname** as the page ↔ discussion mapping, pick the
-   `Comments` category, and copy the `data-repo-id` and `data-category-id`
-   values it shows you (the repo being private just means giscus will note
-   that comments won't be publicly visible — that's expected here).
-5. Open `overrides/main.html` and replace `GISCUS_REPO_ID` and
-   `GISCUS_CATEGORY_ID` with those two values.
-6. Rebuild (`docker compose up --build`) and open a page with
-   `comments: true` — the comment box should appear at the bottom, themed to
-   match whichever light/dark mode is active.
+   giscus creates one automatically per page on the first comment; anyone
+   can still reply to existing ones).
+3. Install the [giscus GitHub App](https://github.com/apps/giscus), scoped to
+   this repo only.
+4. Repo → **Settings → General → Danger Zone** → changed visibility to
+   **public** (giscus can only read Discussions on public repos).
+5. Generated the embed config at <https://giscus.app> (repo
+   `yanosDev/android-docs`, **pathname** mapping, `Comments` category) and
+   pasted the resulting `data-repo-id` / `data-category-id` into
+   `overrides/main.html`.
+
+### Managing threads on GitHub
+
+giscus is just a comment/reply widget — thread management (resolving,
+locking, sorting) happens on github.com, in the repo's **Discussions** tab,
+not through the widget or any mkdocs setting:
+
+- **Mark as resolved:** open the discussion (its title matches the page's
+  URL path), use **Close discussion** at the bottom (or the `···` menu) and
+  pick a reason — *Resolved*, *Outdated*, or *Duplicate*. Closed discussions
+  are hidden from the default "Open" filter in the Discussions tab.
+- **Archive / stop new replies:** use **Lock conversation** (`···` menu) on
+  top of closing it — this prevents anyone (including you) from adding more
+  comments to that thread. There's no per-comment archive, only per-thread.
+- **Sort order:** GitHub Discussions (and giscus, which mirrors them) always
+  show comments oldest-first, chronologically. There's no "newest first"
+  option — that ordering is a platform limitation, not something
+  configurable from the mkdocs side. Individual **replies** within a
+  top-level comment are threaded/nested underneath it, though.
