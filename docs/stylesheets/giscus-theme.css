@@ -1,87 +1,45 @@
 /*
- * Custom giscus theme matching the site's black + orange palette.
- * Loaded by giscus via a public CDN URL (jsDelivr) pointing at this file
- * in the GitHub repo — see overrides/main.html.
- * Variable reference: https://github.com/giscus/giscus/tree/main/styles/themes
+ * Custom giscus theme: dark-gray canvas + orange outlines.
+ *
+ * Instead of redefining every Primer CSS variable from scratch (which is
+ * error-prone and easy to leave gaps in, causing unstyled/broken-looking
+ * elements), this extends giscus's own "dark_dimmed" theme and only
+ * overrides the handful of variables needed for the dark-gray + orange look.
  */
 
+@import url("https://giscus.app/themes/dark_dimmed.css");
+
 :root {
-  color-scheme: dark;
+  /* Dark gray canvas (not near-black) */
+  --color-canvas-default: #2b2f36;
+  --color-canvas-overlay: #2b2f36;
+  --color-canvas-inset: #22262c;
+  --color-canvas-subtle: #333943;
 
-  --color-prettylights-syntax-comment: #8b949e;
-  --color-prettylights-syntax-constant: #ffb74d;
-  --color-prettylights-syntax-entity: #ffcc80;
-  --color-prettylights-syntax-storage-modifier-import: #e8e8e8;
-  --color-prettylights-syntax-entity-tag: #7ee787;
-  --color-prettylights-syntax-keyword: #ff9800;
-  --color-prettylights-syntax-string: #a5d6ff;
-  --color-prettylights-syntax-variable: #ffa657;
-  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
-  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
-  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
-  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
-  --color-prettylights-syntax-carriage-return-bg: #b62324;
-  --color-prettylights-syntax-string-regexp: #7ee787;
-  --color-prettylights-syntax-markup-list: #ff9800;
-  --color-prettylights-syntax-markup-heading: #ff9800;
-  --color-prettylights-syntax-markup-italic: #e8e8e8;
-  --color-prettylights-syntax-markup-bold: #e8e8e8;
-  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
-  --color-prettylights-syntax-markup-deleted-bg: #67060c;
-  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
-  --color-prettylights-syntax-markup-inserted-bg: #033a16;
-  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
-  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
-  --color-prettylights-syntax-markup-ignored-text: #e8e8e8;
-  --color-prettylights-syntax-markup-ignored-bg: #ff9800;
-  --color-prettylights-syntax-meta-diff-range: #ffcc80;
-  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
-  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
-  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
-
-  --color-fg-default: #e8e8e8;
-  --color-fg-muted: #b8b8b8;
-  --color-fg-subtle: #7a7a7a;
-  --color-canvas-default: #101010;
-  --color-canvas-overlay: #0a0a0a;
-  --color-canvas-inset: #0a0a0a;
-  --color-canvas-subtle: #161616;
-  --color-border-default: #2b2b2b;
-  --color-border-muted: #1f1f1f;
-  --color-neutral-muted: rgba(255, 152, 0, 0.15);
+  /* Orange borders/accents */
+  --color-border-default: #ff9800;
+  --color-border-muted: #ff980066;
   --color-accent-fg: #ff9800;
   --color-accent-emphasis: #ff9800;
   --color-accent-muted: rgba(255, 152, 0, 0.3);
   --color-accent-subtle: rgba(255, 152, 0, 0.1);
-  --color-success-fg: #3fb950;
-  --color-attention-fg: #ffb02e;
-  --color-danger-fg: #f85149;
-  --color-done-fg: #ff9800;
 
-  --color-btn-text: #e8e8e8;
-  --color-btn-bg: #1a1a1a;
-  --color-btn-border: #2b2b2b;
-  --color-btn-shadow: none;
-  --color-btn-inset-shadow: none;
-  --color-btn-hover-bg: #232323;
+  /* Outline-style buttons: transparent fill, orange border + text */
+  --color-btn-bg: transparent;
+  --color-btn-border: #ff9800;
+  --color-btn-text: #ff9800;
+  --color-btn-hover-bg: rgba(255, 152, 0, 0.12);
   --color-btn-hover-border: #ff9800;
-  --color-btn-focus-bg: #232323;
   --color-btn-focus-border: #ff9800;
   --color-btn-focus-shadow: 0 0 0 3px rgba(255, 152, 0, 0.4);
-  --color-btn-active-bg: #2b2b2b;
+  --color-btn-active-bg: rgba(255, 152, 0, 0.18);
   --color-btn-active-border: #ff9800;
-  --color-btn-selected-bg: #232323;
+  --color-btn-selected-bg: rgba(255, 152, 0, 0.18);
 
-  --color-btn-primary-text: #0a0a0a;
-  --color-btn-primary-bg: #ff9800;
+  --color-btn-primary-bg: transparent;
   --color-btn-primary-border: #ff9800;
-  --color-btn-primary-shadow: none;
-  --color-btn-primary-inset-shadow: none;
-  --color-btn-primary-hover-bg: #ffab2e;
-  --color-btn-primary-hover-border: #ffab2e;
-  --color-btn-primary-selected-bg: #e68a00;
-  --color-btn-primary-selected-shadow: none;
-  --color-btn-primary-disabled-text: rgba(10, 10, 10, 0.6);
-  --color-btn-primary-disabled-bg: rgba(255, 152, 0, 0.4);
-  --color-btn-primary-disabled-border: transparent;
+  --color-btn-primary-text: #ff9800;
+  --color-btn-primary-hover-bg: rgba(255, 152, 0, 0.18);
+  --color-btn-primary-hover-border: #ff9800;
+  --color-btn-primary-selected-bg: rgba(255, 152, 0, 0.24);
 }
