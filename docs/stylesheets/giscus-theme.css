@@ -1,0 +1,18 @@
+/*
+ * Custom giscus theme: same darkness as giscus's built-in "dark" theme,
+ * just with the default blue accent/link color swapped for orange.
+ *
+ * Extends the real "dark" theme via @import so every variable is covered
+ * (rather than redefining the whole palette from scratch, which is what
+ * broke the widget's styling last time) and only overrides the accent
+ * colors that were blue.
+ */
+
+@import url("https://giscus.app/themes/dark.css");
+
+:root {
+  --color-accent-fg: #ff9800;
+  --color-accent-emphasis: #ff9800;
+  --color-accent-muted: rgba(255, 152, 0, 0.4);
+  --color-accent-subtle: rgba(255, 152, 0, 0.15);
+}

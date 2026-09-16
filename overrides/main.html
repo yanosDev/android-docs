@@ -23,12 +23,15 @@
     </script>
 
     <script>
+      var GISCUS_DARK_THEME = "https://cdn.jsdelivr.net/gh/yanosDev/android-docs@main/docs/stylesheets/giscus-theme.css"
+      var GISCUS_LIGHT_THEME = "light"
+
       var giscus = document.querySelector("script[src*=giscus]")
 
       /* Set palette on initial load */
       var palette = __md_get("__palette")
       if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        var theme = palette.color.scheme === "slate" ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME
         giscus.setAttribute("data-theme", theme)
       }
 
@@ -39,7 +42,7 @@
         ref.addEventListener("change", function() {
           var palette = __md_get("__palette")
           if (palette && typeof palette.color === "object") {
-            var theme = palette.color.scheme === "slate" ? "dark" : "light"
+            var theme = palette.color.scheme === "slate" ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME
             var frame = document.querySelector(".giscus-frame")
             if (frame) {
               frame.contentWindow.postMessage(
