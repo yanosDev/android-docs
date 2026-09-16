@@ -1,27 +1,19 @@
 # Learnings
 
-Short, dated entries: things you learned the hard way, mistakes worth not
-repeating, "today I learned" notes from real work — distinct from
-[Docs](../index.md), which holds settled reference material.
+Reference pages for programming terms — things I already know how to *use*
+but want a precise name and explanation for. Not a dated journal or a
+post-mortem log. Split into cross-language foundations and per-language
+sections; see [Kotlin](kotlin/index.md) for the page format each section
+follows.
 
-## Format
+Need to look something up fast rather than read a page? See the
+[Glossary](glossary.md). Want a sense of what to learn next? See
+[By Level](by-level.md).
 
-```markdown
-### 2026-09-15 — Title
+## Sections
 
-**Context:** what you were doing when this came up.
-
-**What happened:** the surprise, bug, or mistake.
-
-**Lesson:** what you'll do differently next time.
-```
-
-## Entries
-
-### 2026-09-15 — Example entry
-
-**Context:** ...
-
-**What happened:** ...
-
-**Lesson:** ...
+| Section | What's in it |
+|---|---|
+| [General](general/index.md) | Foundational concepts not tied to one language — compiler, generics, type erasure, inlining |
+| [Patterns](patterns/index.md) | Recurring design solutions (Builder, Singleton, ...), with Kotlin examples |
+| [Kotlin](kotlin/index.md) | Language fundamentals, idioms, standard library — one page per term |

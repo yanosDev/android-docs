@@ -12,8 +12,6 @@ a topic.
 | Section | What's in it |
 |---|---|
 | **Docs** | Settled reference material, grouped by topic |
-| ↳ [Kotlin](kotlin/index.md) | Language fundamentals, idioms, standard library |
-| ↳ [Coroutines & Flow](coroutines-flow/index.md) | Structured concurrency, `suspend`, `Flow`, `StateFlow` |
 | ↳ [Android](android/index.md) | Framework basics, lifecycle, architecture components |
 | ↳ [Jetpack Compose](jetpack-compose/index.md) | Declarative UI, state, navigation |
 | ↳ [Material Design](material/index.md) | Material 3 components, theming |
@@ -23,12 +21,16 @@ a topic.
 | ↳ [Dependency Injection](dependency-injection/index.md) | Hilt, Koin, manual DI |
 | [Readings](readings/index.md) | Notes from articles/talks/books, sorted into Do This / Don't Do This / Investigate / Tasks For Me / Why Don't We Do This / Keep This Note / I Don't Get It |
 | [Ideas](ideas/index.md) | Project ideas, experiments to try, "what if" notes |
-| [Learnings](learnings/index.md) | Dated TIL-style entries, mistakes, lessons learned |
+| **Learnings** | Programming languages, organized by specific term/keyword |
+| ↳ [General](learnings/general/index.md) | Cross-language concepts — compiler, generics, type erasure, inlining |
+| ↳ [Patterns](learnings/patterns/index.md) | Design patterns, with Kotlin examples |
+| ↳ [Kotlin](learnings/kotlin/index.md) | Language fundamentals, idioms, standard library |
 
 ## How I use this
 
 - **Docs** holds reference material that's settled enough to trust later — organized by topic.
 - **Readings** is where an external source (article, talk, book) gets logged with a takeaway.
 - **Ideas** is a backlog/scratchpad — half-formed thoughts and things to try.
-- **Learnings** is a dated journal of lessons from actually doing the work.
+- **Learnings** is per-language reference, one page per term I already use
+  but want a precise name and explanation for — not a dated journal.
 - Snippets are kept runnable/copy-pasteable where possible.

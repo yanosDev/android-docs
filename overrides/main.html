@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
+{# toc.integrate keeps the real TOC in the left nav; this adds a separate,
+   independent right-hand rail purely for the "See also" / "Further
+   reading" mirror (see hooks.py). super() still renders the normal
+   primary sidebar. #}
+{% block site_nav %}
+  {{ super() }}
+  {% if page.see_also_html or page.further_reading_html %}
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="links">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% if page.see_also_html %}{{ page.see_also_html | safe }}{% endif %}
+          {% if page.further_reading_html %}{{ page.further_reading_html | safe }}{% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   {{ super() }}
 

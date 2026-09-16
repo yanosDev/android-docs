@@ -56,6 +56,27 @@ body,
   border-left: 3px solid #ff9800;
 }
 
+/* "See also" / "Further reading" mirrored into a right-hand rail (see
+   hooks.py + overrides/main.html). Hide the in-body originals once the
+   rail has room to show them — 60em matches mkdocs-material's own
+   secondary-sidebar breakpoint, so this never leaves both copies visible
+   at once. */
+@media screen and (min-width: 60em) {
+  .md-typeset h2#see-also,
+  .md-typeset h2#see-also + ul,
+  .md-typeset h2#further-reading,
+  .md-typeset h2#further-reading + ul {
+    display: none;
+  }
+}
+
+/* Divider between the two mirrored nav blocks, only when both are present */
+.md-sidebar--secondary .md-nav--secondary + .md-nav--secondary {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
 /* Selection color */
 ::selection {
   background: #ff980055;
