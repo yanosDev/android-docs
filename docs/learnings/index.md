@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Learnings
 
 Short, dated entries: things you learned the hard way, mistakes worth not

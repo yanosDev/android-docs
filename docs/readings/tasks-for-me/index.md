@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Tasks For Me
 
 Concrete action items that came out of something you read — a personal

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ super() }}
+
+  {% if page.meta.comments %}
+    <h2 id="__comments">Comments</h2>
+
+    <!--
+      giscus config — https://giscus.app
+      Replace GISCUS_REPO_ID and GISCUS_CATEGORY_ID with the values giscus.app
+      gives you after you enable Discussions on the repo, create a "Comments"
+      discussion category (format: Announcement), and install the giscus app
+      on this repo. See README.md for the full walkthrough.
+    -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yanosDev/android-docs"
+        data-repo-id="GISCUS_REPO_ID"
+        data-category="Comments"
+        data-category-id="GISCUS_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+    <script>
+      var giscus = document.querySelector("script[src*=giscus]")
+
+      /* Set palette on initial load */
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+      }
+
+      /* Sync giscus theme whenever the light/dark toggle is used */
+      document$.subscribe(function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        if (!ref) return
+        ref.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate" ? "dark" : "light"
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      })
+    </script>
+  {% endif %}
+{% endblock %}

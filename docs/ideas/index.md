@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Ideas
 
 A backlog of project ideas, experiments to try, and "what if" notes. Doesn't

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Keep This Note
 
 Quotes, snippets, or explanations worth keeping close to verbatim — no

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Investigate
 
 Things worth digging into further before forming an opinion — not yet a

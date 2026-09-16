@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Don't Do This
 
 Anti-patterns, pitfalls, and mistakes flagged by something you read —

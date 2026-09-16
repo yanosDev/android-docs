@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Readings
 
 Notes and takeaways from articles, blog posts, talks, and books. Every source

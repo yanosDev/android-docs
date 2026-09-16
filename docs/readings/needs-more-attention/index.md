@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # I Don't Get It — Needs More Attention
 
 Things that didn't click on first read. Park them here instead of losing

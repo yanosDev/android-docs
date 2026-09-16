@@ -56,3 +56,41 @@ docs/
 
 Add a new page by dropping a `.md` file into the relevant folder and listing
 it under `nav:` in `mkdocs.yml`.
+
+## Comments (giscus)
+
+Pages with `comments: true` in their front matter get a threaded
+comment/reply box at the bottom, backed by
+[giscus](https://giscus.app) → GitHub Discussions on this repo. Because the
+repo is **private**, only accounts with read access to it (you, plus anyone
+you add as a collaborator) can view or post comments — this is effectively a
+personal annotation layer, not public commenting.
+
+It's currently enabled on `readings/`, `ideas/`, and `learnings/`. To enable
+it on any other page, add this to the top of the `.md` file:
+
+```markdown
+---
+comments: true
+---
+```
+
+### One-time GitHub setup
+
+1. Repo → **Settings → General → Features** → enable **Discussions**.
+2. Repo → **Discussions** tab → create a category named `Comments` with
+   format **Announcement** (so only you can start a new discussion thread —
+   giscus creates one automatically per page on the first comment; visitors
+   with access can still reply to existing ones).
+3. Install the [giscus GitHub App](https://github.com/apps/giscus) and grant
+   it access to this repo only.
+4. Go to <https://giscus.app>, enter `yanosDev/android-docs` as the
+   repository, choose **pathname** as the page ↔ discussion mapping, pick the
+   `Comments` category, and copy the `data-repo-id` and `data-category-id`
+   values it shows you (the repo being private just means giscus will note
+   that comments won't be publicly visible — that's expected here).
+5. Open `overrides/main.html` and replace `GISCUS_REPO_ID` and
+   `GISCUS_CATEGORY_ID` with those two values.
+6. Rebuild (`docker compose up --build`) and open a page with
+   `comments: true` — the comment box should appear at the bottom, themed to
+   match whichever light/dark mode is active.

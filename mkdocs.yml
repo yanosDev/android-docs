@@ -5,6 +5,7 @@ site_author: Sonay
 theme:
   name: material
   language: en
+  custom_dir: overrides
   palette:
     - scheme: slate
       primary: black
