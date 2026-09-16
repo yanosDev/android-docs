@@ -2,6 +2,8 @@
 
 Language fundamentals and idioms — not tutorials, but reference pages for
 things I already know how to *use* and keep forgetting how to *name*.
+Grouped by level; see [Learnings](../index.md#levels) for what each tier
+means.
 
 ## Page format
 
@@ -24,24 +26,39 @@ Every page in this section follows the same shape:
 7. **See also** — links to related pages in this section.
 8. **Further reading** — the official doc/KEEP/source for going deeper.
 
-## Pages
+## Beginner
 
 | Topic | What it covers |
 |---|---|
 | [Scope Functions](scope-functions.md) | `let`, `run`, `with`, `apply`, `also` — how to pick one |
-| [Inline Functions & Reified Type Parameters](inline-reified.md) | `inline`, `reified`, why `T::class`/`is T` need it |
 | [Inheritance](inheritance.md) | `open`, `:` — Kotlin's `extends`, and why classes are final by default |
 | [Interfaces](interfaces.md) | `interface`, default methods, multiple inheritance of behavior |
 | [Data Classes](data-classes.md) | `data class` — generated `equals`/`copy`/destructuring |
-| [Sealed Classes & Interfaces](sealed.md) | `sealed` — closed hierarchies, exhaustive `when` |
 | [Object Declarations](object-declarations.md) | `object` — singletons and anonymous objects |
 | [Companion Objects](companion-objects.md) | `companion object` — Kotlin's `static` |
-| [Value Classes](value-classes.md) | `value class` — type safety without wrapper overhead |
+
+## Intermediate
+
+| Topic | What it covers |
+|---|---|
+| [Sealed Classes & Interfaces](sealed.md) | `sealed` — closed hierarchies, exhaustive `when` |
 | [Annotations](annotations.md) | `@Annotation`, `annotation class`, `@Target`/`@Retention` |
 | [Coroutines](coroutines.md) | `suspend`, lightweight vs. threads/callbacks |
+| [Dispatchers](dispatchers.md) | `Dispatchers.Main`/`IO`/`Default`, `withContext` |
+
+## Expert
+
+| Topic | What it covers |
+|---|---|
 | [Structured Concurrency](structured-concurrency.md) | `coroutineScope`/`supervisorScope`, automatic cancellation |
 | [Flow](flow.md) | Cold async streams vs. RxJava/`Sequence` |
-| [Dispatchers](dispatchers.md) | `Dispatchers.Main`/`IO`/`Default`, `withContext` |
+
+## Pro
+
+| Topic | What it covers |
+|---|---|
+| [Inline Functions & Reified Type Parameters](inline-reified.md) | `inline`, `reified`, why `T::class`/`is T` need it |
+| [Value Classes](value-classes.md) | `value class` — type safety without wrapper overhead |
 
 ## Still to write
 

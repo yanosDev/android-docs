@@ -41,14 +41,16 @@ just presenting the classic GoF version uncritically.
      overlaps with this pattern, if any.
    - `## Further reading` — bullet list of external links, one link per
      bullet (a Wikipedia article is usually the right anchor).
-3. Wire the new page in:
-   - `docs/learnings/patterns/index.md` — add a row to the `## Pages`
-     table (remove it from "Still to write" if listed there).
+3. Pick a level — Beginner/Intermediate/Expert/Pro (see
+   `docs/learnings/index.md#levels`) — then wire the new page in:
+   - `docs/learnings/patterns/index.md` — add a row to that level's table
+     (add a `## <Tier>` heading if none exists yet; remove it from
+     "Still to write" if listed there).
    - `mkdocs.yml` — add `<Name>: learnings/patterns/<slug>.md` under
-     `Learnings > Patterns` in `nav:`.
-   - `docs/learnings/glossary.md` — add a row under `## Design patterns`.
-   - `docs/learnings/by-level.md` — add the page under Beginner/
-     Intermediate/Expert/Pro.
+     `Learnings > Patterns > <Tier>` in `nav:` (one level deeper than
+     `Patterns` itself — there's no separate top-level "by level" section).
+   - `docs/learnings/glossary.md` — add a row under `## Design patterns`
+     (the glossary stays grouped by topic, not by level).
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.

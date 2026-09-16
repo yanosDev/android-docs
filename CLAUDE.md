@@ -26,7 +26,15 @@ section name might suggest, but it isn't the intent here. It's reference
 pages for programming terms, each covering one named concept the user
 already knows how to *use* but wants a precise name and explanation for.
 `docs/learnings/index.md` lists the sections below; each section's own
-`index.md` lists its pages.
+`index.md` lists its pages. Two standalone lookup pages sit alongside the
+sections, at the top level of `nav:` (not inside any section): `glossary.md`
+(nouns — terms and their meanings) and `phrasebook.md` (verbs — the words
+for describing what code is *doing*, e.g. "propagate", "shadow",
+"dispatch"). Both are curated free-standing references, not derived
+mechanically from the term pages — update `glossary.md` whenever a new
+term page is added (mandatory, see below), but only add to
+`phrasebook.md` when a genuinely new, distinct verb/phrase comes up
+worth having a precise word for.
 
 Three kinds of section, side by side:
 
@@ -96,24 +104,30 @@ tutorial:
 10. `## Further reading` — bullet list of external links, one link per
     bullet.
 
+Every section (`general/`, `patterns/`, `<language>/`) groups its own
+pages by level — Beginner/Intermediate/Expert/Pro — both in `nav:` and in
+that section's own `index.md`. See `docs/learnings/index.md#levels` for
+what distinguishes each tier; picking one is a judgment call the same way
+glossary grouping is — make the call rather than skipping it. There is no
+separate "by level" section elsewhere; the level grouping lives inside
+each topic section, not as a redirect layer on top of it.
+
 After writing a page:
 
-- Add it to the table in that section's `index.md` (e.g.
-  `docs/learnings/kotlin/index.md` or `docs/learnings/general/index.md`;
-  move it out of "Still to write" if it was listed there).
-- Add it to `nav:` in `mkdocs.yml` under `Learnings > General`,
-  `Learnings > Patterns`, or `Learnings > <Language>`.
+- Add it to the matching level's table in that section's `index.md` (e.g.
+  under `## Intermediate` in `docs/learnings/kotlin/index.md`; move it out
+  of "Still to write" if it was listed there; add a `## <Tier>` heading if
+  that section doesn't have one yet).
+- Add it to `nav:` in `mkdocs.yml` under `Learnings > General >
+  <Tier>`, `Learnings > Patterns > <Tier>`, or `Learnings > <Language> >
+  <Tier>` — nested one level deeper than the section itself, not as a
+  flat list directly under the section.
 - Add each term the page covers as a row in `docs/learnings/glossary.md`
   (one row per keyword/term, even if several share one page — see how
   `let`/`run`/`with`/`apply`/`also` each get their own row pointing at the
   same "Scope Functions" page). Put the row under the matching `##` group
   ("General concepts", or "`<Language>` — `<topic>`"), adding a new group
-  if none fits.
-- Add the page (once per page, not once per glossary row) to
-  `docs/learnings/by-level.md` under Beginner/Intermediate/Expert/Pro —
-  see that page's own section descriptions for what distinguishes each
-  tier. This is a judgment call the same way glossary grouping was; make
-  the call rather than skipping it.
+  if none fits. The glossary itself stays grouped by topic, not by level.
 
 Headings do **not** get a `¶` permalink icon (`toc.permalink: false` in
 `mkdocs.yml`) — that was turned off deliberately.

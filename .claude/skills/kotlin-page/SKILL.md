@@ -52,18 +52,21 @@ else — don't guess from the "Still to write" list without confirming.
      (see `CLAUDE.md`'s "TOC-sidebar mirror" section) by flattening each
      `<li>` to its `<a>`(s) — a bullet with several links still renders
      fine in the body but loses its grouping text once mirrored.
-3. Wire the new page in:
-   - `docs/learnings/kotlin/index.md` — add a row to the `## Pages` table
-     (and remove the corresponding line from `## Still to write` if it was
+3. Pick a level — Beginner/Intermediate/Expert/Pro (see
+   `docs/learnings/index.md#levels` for what distinguishes each tier) —
+   then wire the new page in:
+   - `docs/learnings/kotlin/index.md` — add a row to that level's table
+     (add a `## <Tier>` heading if the section doesn't have one yet; and
+     remove the corresponding line from `## Still to write` if it was
      listed there).
    - `mkdocs.yml` — add `<Name>: learnings/kotlin/<slug>.md` under
-     `Learnings > Kotlin` in `nav:`.
+     `Learnings > Kotlin > <Tier>` in `nav:` (one level deeper than
+     `Kotlin` itself — there's no separate top-level "by level" section).
    - `docs/learnings/glossary.md` — add one row per keyword/term the page
      covers (several rows can point at the same page, e.g. `let`/`run`/
      `with`/`apply`/`also` all point at "Scope Functions") under a
-     `## Kotlin — <topic>` group, adding a new group if none fits.
-   - `docs/learnings/by-level.md` — add the page (once, not once per term)
-     under Beginner/Intermediate/Expert/Pro.
+     `## Kotlin — <topic>` group, adding a new group if none fits. The
+     glossary stays grouped by topic, not by level.
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.

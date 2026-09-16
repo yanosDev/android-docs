@@ -2,7 +2,9 @@
 
 Every term covered in [Learnings](index.md), one line each, for scanning
 rather than reading. Grouped foundations-first: general concepts, then
-Kotlin's specific keywords that build on them.
+Kotlin's specific keywords that build on them. Looking for a verb instead
+of a noun — the right word for what code is *doing*? See the
+[Phrasebook](phrasebook.md).
 
 ## General concepts
 
@@ -13,6 +15,7 @@ Kotlin's specific keywords that build on them.
 | Type erasure | Generic type info is discarded at runtime — a JVM `List<String>` is just a `List` | [Type Erasure](general/type-erasure.md) |
 | Inline / inlining | Splicing a function's body into its call site at compile time, instead of a separate call | [Inline (Inlining)](general/inline.md) |
 | Higher-order function | A function that takes and/or returns another function | [Higher-Order Functions](general/higher-order-functions.md) |
+| Statement vs. expression | Whether a construct produces a usable value | [Statement vs. Expression](general/statement-vs-expression.md) |
 
 ## Design patterns
 

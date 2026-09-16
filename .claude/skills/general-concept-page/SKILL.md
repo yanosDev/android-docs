@@ -51,17 +51,19 @@ language's own page, and cross-link both ways — see
    - `## Further reading` — bullet list of external links, one link per
      bullet. A Wikipedia article is usually the right anchor for the pure
      general concept; add a language doc link too if directly relevant.
-3. Wire the new page in:
-   - `docs/learnings/general/index.md` — add a row to the `## Pages` table.
+3. Pick a level — Beginner/Intermediate/Expert/Pro (see
+   `docs/learnings/index.md#levels`) — then wire the new page in:
+   - `docs/learnings/general/index.md` — add a row to that level's table
+     (add a `## <Tier>` heading if none exists yet).
    - `mkdocs.yml` — add `<Name>: learnings/general/<slug>.md` under
-     `Learnings > General` in `nav:`.
+     `Learnings > General > <Tier>` in `nav:` (one level deeper than
+     `General` itself — there's no separate top-level "by level" section).
    - Any language-specific page that already discusses this concept in
      passing — add a one-line `## See also` cross-link back to it (see
      how `docs/learnings/kotlin/inline-reified.md` links to
      `../general/type-erasure.md`).
-   - `docs/learnings/glossary.md` — add a row under `## General concepts`.
-   - `docs/learnings/by-level.md` — add the page under Beginner/
-     Intermediate/Expert/Pro.
+   - `docs/learnings/glossary.md` — add a row under `## General concepts`
+     (the glossary stays grouped by topic, not by level).
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.

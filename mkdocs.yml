@@ -88,37 +88,48 @@ nav:
   - Learnings:
       - Overview: learnings/index.md
       - Glossary: learnings/glossary.md
-      - By Level: learnings/by-level.md
+      - Phrasebook: learnings/phrasebook.md
       - General:
           - Overview: learnings/general/index.md
-          - Compiler: learnings/general/compiler.md
-          - Generics: learnings/general/generics.md
-          - Type Erasure: learnings/general/type-erasure.md
-          - Inline (Inlining): learnings/general/inline.md
-          - Higher-Order Functions: learnings/general/higher-order-functions.md
+          - Beginner:
+              - Compiler: learnings/general/compiler.md
+              - Generics: learnings/general/generics.md
+              - Higher-Order Functions: learnings/general/higher-order-functions.md
+              - Statement vs. Expression: learnings/general/statement-vs-expression.md
+          - Intermediate:
+              - Inline (Inlining): learnings/general/inline.md
+          - Expert:
+              - Type Erasure: learnings/general/type-erasure.md
       - Patterns:
           - Overview: learnings/patterns/index.md
-          - Builder: learnings/patterns/builder.md
-          - Singleton: learnings/patterns/singleton.md
-          - Factory: learnings/patterns/factory.md
-          - Observer: learnings/patterns/observer.md
-          - Strategy: learnings/patterns/strategy.md
-          - Decorator: learnings/patterns/decorator.md
-          - Adapter: learnings/patterns/adapter.md
-          - Repository: learnings/patterns/repository.md
+          - Beginner:
+              - Singleton: learnings/patterns/singleton.md
+          - Intermediate:
+              - Builder: learnings/patterns/builder.md
+              - Factory: learnings/patterns/factory.md
+              - Observer: learnings/patterns/observer.md
+              - Strategy: learnings/patterns/strategy.md
+              - Adapter: learnings/patterns/adapter.md
+              - Repository: learnings/patterns/repository.md
+          - Expert:
+              - Decorator: learnings/patterns/decorator.md
       - Kotlin:
           - Overview: learnings/kotlin/index.md
-          - Scope Functions: learnings/kotlin/scope-functions.md
-          - Inline Functions & Reified Type Parameters: learnings/kotlin/inline-reified.md
-          - Inheritance: learnings/kotlin/inheritance.md
-          - Interfaces: learnings/kotlin/interfaces.md
-          - Data Classes: learnings/kotlin/data-classes.md
-          - Sealed Classes & Interfaces: learnings/kotlin/sealed.md
-          - Object Declarations: learnings/kotlin/object-declarations.md
-          - Companion Objects: learnings/kotlin/companion-objects.md
-          - Value Classes: learnings/kotlin/value-classes.md
-          - Annotations: learnings/kotlin/annotations.md
-          - Coroutines: learnings/kotlin/coroutines.md
-          - Structured Concurrency: learnings/kotlin/structured-concurrency.md
-          - Flow: learnings/kotlin/flow.md
-          - Dispatchers: learnings/kotlin/dispatchers.md
+          - Beginner:
+              - Scope Functions: learnings/kotlin/scope-functions.md
+              - Inheritance: learnings/kotlin/inheritance.md
+              - Interfaces: learnings/kotlin/interfaces.md
+              - Data Classes: learnings/kotlin/data-classes.md
+              - Object Declarations: learnings/kotlin/object-declarations.md
+              - Companion Objects: learnings/kotlin/companion-objects.md
+          - Intermediate:
+              - Sealed Classes & Interfaces: learnings/kotlin/sealed.md
+              - Annotations: learnings/kotlin/annotations.md
+              - Coroutines: learnings/kotlin/coroutines.md
+              - Dispatchers: learnings/kotlin/dispatchers.md
+          - Expert:
+              - Structured Concurrency: learnings/kotlin/structured-concurrency.md
+              - Flow: learnings/kotlin/flow.md
+          - Pro:
+              - Inline Functions & Reified Type Parameters: learnings/kotlin/inline-reified.md
+              - Value Classes: learnings/kotlin/value-classes.md
