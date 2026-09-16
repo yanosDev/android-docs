@@ -61,7 +61,9 @@ markdown_extensions:
 nav:
   - Docs:
       - Language:
-          - Kotlin: kotlin/index.md
+          - Kotlin:
+              - Overview: kotlin/index.md
+              - Scope Functions: kotlin/scope-functions.md
           - Coroutines & Flow: coroutines-flow/index.md
       - Architecture:
           - Android: android/index.md
