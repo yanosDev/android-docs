@@ -85,6 +85,25 @@ nav:
       - Keep This Note: readings/keep-this-note/index.md
       - I Don't Get It: readings/needs-more-attention/index.md
   - Ideas: ideas/index.md
+  - Q&A:
+      - Overview: qa/index.md
+      - Kotlin: qa/kotlin.md
+      - Coroutines & Concurrency: qa/coroutines-concurrency.md
+      - Android Core & Internals: qa/android-core.md
+      - Jetpack Compose: qa/compose.md
+      - Views & RecyclerView: qa/views-recyclerview.md
+      - Architecture & Design Patterns: qa/architecture-patterns.md
+      - Dependency Injection: qa/dependency-injection.md
+      - Testing: qa/testing.md
+      - Networking: qa/networking.md
+      - Persistence: qa/persistence.md
+      - Performance & Rendering: qa/performance.md
+      - Security & Privacy: qa/security-privacy.md
+      - Build & CI/CD: qa/build-ci.md
+      - System APIs & Hardware: qa/system-apis.md
+      - System Design: qa/system-design.md
+      - Release & Ops Practices: qa/release-practices.md
+      - Kotlin Multiplatform & Misc: qa/kmp-misc.md
   - Learnings:
       - Overview: learnings/index.md
       - Glossary: learnings/glossary.md

@@ -132,6 +132,35 @@ After writing a page:
 Headings do **not** get a `¶` permalink icon (`toc.permalink: false` in
 `mkdocs.yml`) — that was turned off deliberately.
 
+## `docs/qa/` — Q&A self-check (distinct from `Learnings`)
+
+A separate top-level section, unrelated to the `Learnings` page pattern
+above: one page per broad topic (`kotlin.md`, `compose.md`,
+`coroutines-concurrency.md`, etc. — 17 pages, listed in `docs/qa/index.md`),
+each a flat run of interview-style questions grouped under `##` headings
+matching its source topics. Every question is a collapsed admonition:
+
+```markdown
+??? question "The question text"
+    The answer, indented 4 spaces.
+```
+
+This is mkdocs-material's own `question` admonition type via
+`pymdownx.details` (already enabled) — no extra config needed, and it's
+unrelated to the `## See also`/`## Further reading` TOC-sidebar mirror
+mechanism below (that only fires on those two specific headings).
+Numbering isn't used, so there's no sequence to keep consistent — each
+`???` block is independent.
+
+Unlike `Learnings`, this content was bulk-imported from a single source
+document (an interview-prep Q&A file) rather than hand-curated one term
+at a time, and it is **not** wired into the glossary or phrasebook — it's
+a separate, coarser-grained resource for self-testing breadth, not a
+precise-terminology reference. Don't try to reconcile or merge the two;
+they serve different purposes. If more Q&A content is added later, follow
+the same topic-grouping and collapsed-admonition shape, and add new pages
+to both `docs/qa/index.md`'s table and `nav:` under `Q&A`.
+
 ### TOC-sidebar mirror (`hooks.py` + `overrides/main.html`)
 
 `hooks.py`'s `on_page_content` hook locates `## See also` / `## Further
