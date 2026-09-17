@@ -11,7 +11,8 @@ step-by-step for producing one page from that pattern.
 
 `args` (if given) name the topic, e.g. `Delegation` or `Generics & Variance`.
 If no topic was given, ask which concept to write up before doing anything
-else — don't guess from the "Still to write" list without confirming.
+else — don't guess from `docs/ideas/index.md`'s "Documentation backlog"
+(Kotlin section) without confirming.
 
 ## Steps
 
@@ -56,9 +57,9 @@ else — don't guess from the "Still to write" list without confirming.
    `docs/learnings/index.md#levels` for what distinguishes each tier) —
    then wire the new page in:
    - `docs/learnings/kotlin/index.md` — add a row to that level's table
-     (add a `## <Tier>` heading if the section doesn't have one yet; and
-     remove the corresponding line from `## Still to write` if it was
-     listed there).
+     (add a `## <Tier>` heading if the section doesn't have one yet).
+   - If this topic was listed in `docs/ideas/index.md`'s "Documentation
+     backlog" (Kotlin section), remove that line now.
    - `mkdocs.yml` — add `<Name>: learnings/kotlin/<slug>.md` under
      `Learnings > Kotlin > <Tier>` in `nav:` (one level deeper than
      `Kotlin` itself — there's no separate top-level "by level" section).
@@ -70,3 +71,8 @@ else — don't guess from the "Still to write" list without confirming.
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.
+
+The glossary update in step 3 is mandatory, not optional — see the rule at
+the top of `CLAUDE.md`. If you're ever fixing up several pages at once and
+lose track of which ones got a glossary row, run the `docs-sync` skill
+afterward rather than trying to remember by hand.

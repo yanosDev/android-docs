@@ -11,29 +11,22 @@ a topic.
 
 | Section | What's in it |
 |---|---|
-| **Docs** | Settled reference material, grouped by topic |
-| ↳ [Android](android/index.md) | Framework basics, lifecycle, architecture components |
-| ↳ [Jetpack Compose](jetpack-compose/index.md) | Declarative UI, state, navigation |
-| ↳ [Material Design](material/index.md) | Material 3 components, theming |
-| ↳ [Gradle](gradle/index.md) | Build system, version catalogs, plugins |
-| ↳ [JitPack](jitpack/index.md) | Publishing & consuming libraries |
-| ↳ [Retrofit](retrofit/index.md) | Networking, serialization |
-| ↳ [Dependency Injection](dependency-injection/index.md) | Hilt, Koin, manual DI |
 | [Readings](readings/index.md) | Notes from articles/talks/books, sorted into Do This / Don't Do This / Investigate / Tasks For Me / Why Don't We Do This / Keep This Note / I Don't Get It |
 | [Ideas](ideas/index.md) | Project ideas, experiments to try, "what if" notes |
+| **Reference** | Quick-lookup tools — terms and phrases, self-contained |
+| ↳ [Glossary](reference/glossary.md) | Terms and their meanings, grouped by topic |
+| ↳ [Phrasebook](reference/phrasebook.md) | The verbs/phrases for describing what code is doing |
 | [Q&A](qa/index.md) | Senior/pro interview-style Q&A across Kotlin and Android, for self-testing |
-| **Learnings** | Programming languages, organized by specific term/keyword |
-| ↳ [General](learnings/general/index.md) | Cross-language concepts — compiler, generics, type erasure, inlining |
-| ↳ [Patterns](learnings/patterns/index.md) | Design patterns, with Kotlin examples |
-| ↳ [Kotlin](learnings/kotlin/index.md) | Language fundamentals, idioms, standard library |
-| ↳ [Android](learnings/android/index.md) | Platform APIs and mechanics — components, lifecycle, navigation, process model |
+| [Documentation](documentation/index.md) | Real write-ups, built one topic at a time when Q&A isn't enough |
 
 ## How I use this
 
-- **Docs** holds reference material that's settled enough to trust later — organized by topic.
 - **Readings** is where an external source (article, talk, book) gets logged with a takeaway.
-- **Ideas** is a backlog/scratchpad — half-formed thoughts and things to try.
+- **Ideas** is a backlog/scratchpad — half-formed thoughts, things to try.
+- **Reference** is for when you already sort of know what you're looking for —
+  the exact term (Glossary) or the exact verb (Phrasebook), not a page to read start to finish.
 - **Q&A** is collapsed questions for self-testing — try to answer before revealing.
-- **Learnings** is per-language reference, one page per term I already use
-  but want a precise name and explanation for — not a dated journal.
+- **Documentation** starts empty and grows on demand: when something in Q&A
+  turns out to need more than a question and answer, that's what this
+  section is for.
 - Snippets are kept runnable/copy-pasteable where possible.

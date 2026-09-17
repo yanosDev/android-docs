@@ -67,3 +67,8 @@ language's own page, and cross-link both ways — see
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.
+
+The glossary update in step 3 is mandatory, not optional — see the rule at
+the top of `CLAUDE.md`. If you're ever fixing up several pages at once and
+lose track of which ones got a glossary row, run the `docs-sync` skill
+afterward rather than trying to remember by hand.

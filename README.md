@@ -27,20 +27,12 @@ mkdocs serve
 
 ## Project structure
 
-The top nav has 4 sections: **Docs**, **Readings**, **Ideas**, **Learnings**.
+The top nav has 5 sections: **Readings**, **Ideas**, **Reference**, **Q&A**,
+**Documentation**.
 
 ```text
 docs/
 ├── index.md                  # Landing page / table of contents (not a tab, reached via the logo)
-├── kotlin/                   # Docs > Language > Kotlin
-├── coroutines-flow/          # Docs > Language > Coroutines & Flow
-├── android/                  # Docs > Architecture > Android
-├── dependency-injection/     # Docs > Architecture > Dependency Injection
-├── jetpack-compose/          # Docs > UI > Jetpack Compose
-├── material/                 # Docs > UI > Material Design
-├── gradle/                   # Docs > Build & Publish > Gradle
-├── jitpack/                  # Docs > Build & Publish > JitPack
-├── retrofit/                 # Docs > Networking > Retrofit
 ├── readings/                  # Notes/takeaways on articles, talks, books
 │   ├── do-this/               # Practices worth adopting
 │   ├── dont-do-this/          # Anti-patterns to avoid
@@ -50,7 +42,9 @@ docs/
 │   ├── keep-this-note/        # Quotes/snippets worth keeping
 │   └── needs-more-attention/  # Didn't click yet, needs another pass
 ├── ideas/                    # Backlog of project ideas & experiments
-├── learnings/                # Dated TIL-style entries, lessons learned
+├── reference/                # Glossary + Phrasebook, self-contained quick lookups
+├── qa/                       # Senior/pro interview-style Q&A, for self-testing
+├── documentation/            # Real write-ups, built one topic at a time on demand
 └── stylesheets/extra.css     # Black/orange theme tweaks on top of mkdocs-material
 ```
 
@@ -88,7 +82,7 @@ change to that file may take a few minutes to show up — see
    this repo only.
 4. Repo → **Settings → General → Danger Zone** → changed visibility to
    **public** (giscus can only read Discussions on public repos).
-5. Generated the embed config at <https://giscus.app> (repo
+5. Generated the embed config at <https://giscus.app> (repoSHare
    `yanosDev/android-docs`, **pathname** mapping, `Comments` category) and
    pasted the resulting `data-repo-id` / `data-category-id` into
    `overrides/main.html`.

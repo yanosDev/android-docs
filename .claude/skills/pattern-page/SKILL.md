@@ -9,8 +9,7 @@ Full pattern and rationale live in `CLAUDE.md` under "`docs/learnings/` —
 term reference" — read it before writing.
 
 `args` (if given) name the pattern, e.g. `Singleton` or `Observer`. If none
-was given, ask which pattern to write up before guessing from "Still to
-write" in `docs/learnings/patterns/index.md`.
+was given, ask which pattern to write up rather than guessing.
 
 Before writing, check whether Kotlin already has a built-in feature that
 covers (or replaces) this pattern — e.g. `docs/learnings/kotlin/object-declarations.md`
@@ -44,8 +43,7 @@ just presenting the classic GoF version uncritically.
 3. Pick a level — Beginner/Intermediate/Expert/Pro (see
    `docs/learnings/index.md#levels`) — then wire the new page in:
    - `docs/learnings/patterns/index.md` — add a row to that level's table
-     (add a `## <Tier>` heading if none exists yet; remove it from
-     "Still to write" if listed there).
+     (add a `## <Tier>` heading if none exists yet).
    - `mkdocs.yml` — add `<Name>: learnings/patterns/<slug>.md` under
      `Learnings > Patterns > <Tier>` in `nav:` (one level deeper than
      `Patterns` itself — there's no separate top-level "by level" section).
@@ -54,3 +52,8 @@ just presenting the classic GoF version uncritically.
 4. If a Python venv with `mkdocs-material` is available, run `mkdocs build`
    (from the repo root) and check for warnings other than expected forward
    links to pages that genuinely don't exist yet.
+
+The glossary update in step 3 is mandatory, not optional — see the rule at
+the top of `CLAUDE.md`. If you're ever fixing up several pages at once and
+lose track of which ones got a glossary row, run the `docs-sync` skill
+afterward rather than trying to remember by hand.
